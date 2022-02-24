@@ -160,3 +160,54 @@ module full_subtracter_circkt_behavioural (a, b, c, difference, borrow);
         end
     end
 endmodule
+
+
+
+
+
+
+
+
+// Code your testbench here
+// or browse Examples
+module test_full_subtractor_circkt_dataflow;
+  reg a, b,c;
+  wire difference , borrow;
+  qfull_subtracter_circkt a1(a, b, c, difference, borrow);
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars;
+    #100 $finish;
+  end
+initial
+begin
+a=0; b=0; c=0;
+  $monitor ("a=%0b b=%0b c=%0b difference=%0b borrow=%0b", a, b, c,difference,borrow);
+#5 a=0; b=0; c=1;
+#5 a=0; b=1; c=0;
+#5 a=0; b=1; c=1;
+#5 a=1; b=0; c=0;
+#5 a=1; b=0; c=1;
+#5 a=1; b=1; c=0;
+#5 a=1; b=1; c=1;
+  
+end
+endmodule
+
+
+// Code your design here
+module qfull_subtracter_circkt (a, b, c,difference,borrow);
+  input a,b,c;
+  output difference,borrow;
+  assign difference = (a^b)^c;
+  assign borrow = (((~a)&b)||(b&c)||((~a)&c));
+endmodule
+
+
+
+
+
+
+
+
+
