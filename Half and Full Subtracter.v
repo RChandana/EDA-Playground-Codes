@@ -1,6 +1,5 @@
-// Code your testbench here
-// or browse Examples
-module Half_subtracter_circkt_tb_behavioural();
+// Verilog Code for Half Subtractor Behavioural
+module Half_subtracter_tb_behavioural();
   reg  a, b;
   wire  difference, borrow;
   behavioural_half_subtracter_circket a1(a,b,difference,borrow);
@@ -23,13 +22,7 @@ endmodule
 
 
 
-
-
-
-
-
-
-// Code your design here
+// Design Code for Half Subtractor Behavioural
 module behavioural_half_subtracter_circket(a,b,difference,borrow);
   input a,b ;
   output difference,borrow ;
@@ -71,8 +64,7 @@ endmodule
 
 
 
-// Code your testbench here
-// or browse Examples
+// Verilog Code for Full Subtractor Behavioural
 module test_full_subtractor_circkt_behavioural;
   reg a, b,c;
   wire difference , borrow;
@@ -100,18 +92,7 @@ endmodule
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-// Code your design here
+// Design Code for Full Subtractor Behavioural
 module full_subtracter_circkt_behavioural (a, b, c, difference, borrow);
   input a,b,c;
   output difference , borrow;
@@ -168,8 +149,10 @@ endmodule
 
 
 
-// Code your testbench here
-// or browse Examples
+
+
+
+// Verilog Code for Full Subtractor Dataflow
 module test_full_subtractor_circkt_dataflow;
   reg a, b,c;
   wire difference , borrow;
@@ -195,7 +178,7 @@ end
 endmodule
 
 
-// Code your design here
+// Design Code for Full Subtractor Dataflow
 module qfull_subtracter_circkt (a, b, c,difference,borrow);
   input a,b,c;
   output difference,borrow;
@@ -210,7 +193,10 @@ endmodule
 
 
 
-//
+
+
+
+// Verilog Code for Half Subtractor Dataflow
 module Half_subtractor_tb;
   reg  a, b;
   wire  difference, borrow;
@@ -231,7 +217,7 @@ module Half_subtractor_tb;
 endmodule
 
 
-// Code your design here
+// Design Code for Half Subtractor Dataflow
 module half_subtracter (a,b,difference,borrow);
   output difference, borrow;
   input a, b;
