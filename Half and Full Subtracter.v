@@ -210,4 +210,31 @@ endmodule
 
 
 
+//
+module Half_subtractor_tb;
+  reg  a, b;
+  wire  difference, borrow;
+  half_subtracter a1(a,b,difference,borrow);
+  initial begin
+    $dumpfile("dump.vcd");
+    $dumpvars;
+    #100 $finish;
+  end 
+  initial
+    begin
+     a = 0; b =0;
+      $monitor ("a=%0b b=%0b difference=%0b borrow=%0b", a,b,difference,borrow);  
+  #5; a = 0; b =1;
+  #5; a = 1; b =0;
+  #5; a = 1; b =1;
+    end
+endmodule
 
+
+// Code your design here
+module half_subtracter (a,b,difference,borrow);
+  output difference, borrow;
+  input a, b;
+  assign difference = a ^ b;
+  assign borrow = ((~a) & b); 
+endmodule
