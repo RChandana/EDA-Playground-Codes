@@ -2,7 +2,7 @@
 module Half_subtracter_tb_behavioural();
   reg  a, b;
   wire  difference, borrow;
-  behavioural_half_subtracter_circket a1(a,b,difference,borrow);
+  behavioural_half_subtracter a1(a,b,difference,borrow);
   initial begin
      $dumpfile("dump.vcd");
     $dumpvars;
@@ -23,7 +23,7 @@ endmodule
 
 
 // Design Code for Half Subtractor Behavioural
-module behavioural_half_subtracter_circket(a,b,difference,borrow);
+module behavioural_half_subtracter(a,b,difference,borrow);
   input a,b ;
   output difference,borrow ;
   reg difference,borrow;
@@ -65,10 +65,10 @@ endmodule
 
 
 // Verilog Code for Full Subtractor Behavioural
-module test_full_subtractor_circkt_behavioural;
+module test_full_subtractor_behavioural;
   reg a, b,c;
   wire difference , borrow;
-  full_subtracter_circkt_behavioural a1(a, b, c, difference, borrow);
+  full_subtracter_behavioural a1(a, b, c, difference, borrow);
   initial begin
     $dumpfile("dump.vcd");
     $dumpvars;
@@ -93,7 +93,7 @@ endmodule
 
 
 // Design Code for Full Subtractor Behavioural
-module full_subtracter_circkt_behavioural (a, b, c, difference, borrow);
+module full_subtracter_behavioural (a, b, c, difference, borrow);
   input a,b,c;
   output difference , borrow;
   reg difference , borrow;
@@ -153,7 +153,7 @@ endmodule
 
 
 // Verilog Code for Full Subtractor Dataflow
-module test_full_subtractor_circkt_dataflow;
+module test_full_subtractor_dataflow;
   reg a, b,c;
   wire difference , borrow;
   qfull_subtracter_circkt a1(a, b, c, difference, borrow);
@@ -179,7 +179,7 @@ endmodule
 
 
 // Design Code for Full Subtractor Dataflow
-module qfull_subtracter_circkt (a, b, c,difference,borrow);
+module qfull_subtracter (a, b, c,difference,borrow);
   input a,b,c;
   output difference,borrow;
   assign difference = (a^b)^c;
