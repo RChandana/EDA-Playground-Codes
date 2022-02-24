@@ -1,9 +1,8 @@
-// Code your testbench here
-// or browse Examples
-module test_full_adder_circkt_dataflow;
+// Verilog Code for Full Adder Data Flow
+module test_full_adder_dataflow;
   reg a, b,c;
   wire sum, carry;
-  qfull_adder_circkt a1(a, b, c, sum, carry);
+  qfull_adder a1(a, b, c, sum, carry);
   initial begin
     $dumpfile("dump.vcd");
     $dumpvars;
@@ -27,8 +26,8 @@ endmodule
 
 
 
-// Code your design here
-module qfull_adder_circkt (a, b, c, sum, carry);
+// Desgin Code for Full Adder
+module qfull_adder (a, b, c, sum, carry);
   input a,b,c;
   output sum , carry;
   assign sum = (a^b)^c;
@@ -38,18 +37,11 @@ endmodule
 
 
 
-
-
-
-
-
-
-// Code your testbench here
-// or browse Examples
-module Half_adder_circkt_tb();
+// Verilog Code for Half Adder
+module Half_adder_tb();
   reg  a, b;
   wire  sum, carry;
-  half_adder_circket a1(a,b,sum,carry);
+  half_adder a1(a,b,sum,carry);
   initial begin
      $dumpfile("dump.vcd");
     $dumpvars;
@@ -68,8 +60,8 @@ endmodule
 
 
 
-// Code your design here
-module half_adder_circket(a,b,sum,carry);
+// Design Code for Half Adder
+module half_adder(a,b,sum,carry);
   output sum, carry;
   input a, b;
   assign sum = a ^ b;
@@ -81,14 +73,11 @@ endmodule
 
 
 
-
-
-// Code your testbench here
-// or browse Examples
-module test_full_adder_circkt;
+// Verilog Code for Full Adder Behavioural
+module test_full_adder;
   reg a, b,c;
   wire sum, carry;
-  full_adder_circkt_behavioural a1(a, b, c, sum, carry);
+  full_adder_behavioural a1(a, b, c, sum, carry);
   initial begin
     $dumpfile("dump.vcd");
     $dumpvars;
@@ -111,9 +100,8 @@ endmodule
 
 
 
-// Code your design here
-// Code your design here
-module full_adder_circkt_behavioural(a, b, c, sum, carry);
+// Design Code for Full Adder Behavioural
+module full_adder_behavioural(a, b, c, sum, carry);
  input a, b, c;
  output sum, carry;
   reg sum, carry;
@@ -160,12 +148,11 @@ endmodule
 
 
 
-// Code your testbench here
-// or browse Examples
-module test_full_adder_circkt;
+// Verilog code for Full Adder Behavioural
+module test_full_adder;
   reg a, b,c;
   wire sum, carry;
-  full_adder_circkt_behavioural a1(a, b, c, sum, carry);
+  full_adder_behavioural a1(a, b, c, sum, carry);
   initial begin
     $dumpfile("dump.vcd");
     $dumpvars;
@@ -188,9 +175,8 @@ endmodule
   
 
 
-// Code your design here
-// Code your design here
-module full_adder_circkt_behavioural(a, b, c, sum, carry);
+// Design for Full Adder
+module full_adder_behavioural(a, b, c, sum, carry);
  input a, b, c;
  output sum, carry;
   reg sum, carry;
@@ -237,12 +223,11 @@ endmodule
 
 
 
-// Code your testbench here
-// or browse Examples
-module Half_adder_circkt_tb_behavioural();
+// Verilog Code for Half Adder Behavioural
+module Half_adder_tb_behavioural();
   reg  a, b;
   wire  sum, carry;
-  behavioural_half_adder_circket a1(a,b,sum,carry);
+  behavioural_half_adder a1(a,b,sum,carry);
   initial begin
      $dumpfile("dump.vcd");
     $dumpvars;
@@ -262,8 +247,8 @@ endmodule
 
 
 
-// Code your design here
-module behavioural_half_adder_circket (a,b,sum,carry);
+// Design Code for Half Adder Behavioural
+module behavioural_half_adder (a,b,sum,carry);
   input a , b;
   output sum , carry;
   reg sum , carry;
