@@ -1,5 +1,5 @@
 // 
-module decoder3_to_8( in,out, en);
+module decoder_3X8( in,out, en);
 input [2:0]  in;
 input en;
 output [7:0] out;
