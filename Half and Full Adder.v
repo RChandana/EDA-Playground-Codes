@@ -73,6 +73,9 @@ endmodule
 
 
 
+
+
+
 // Verilog Code for Full Adder Behavioural
 module test_full_adder;
   reg a, b,c;
@@ -139,6 +142,10 @@ module full_adder_behavioural(a, b, c, sum, carry);
                end
        end
 endmodule
+
+
+
+
 
 
 
@@ -215,6 +222,9 @@ module full_adder_behavioural(a, b, c, sum, carry);
        end
 endmodule
             
+
+
+
 
 
 
