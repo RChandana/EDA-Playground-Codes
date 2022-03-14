@@ -35,8 +35,6 @@ module qfull_adder (a, b, c, sum, carry);
 endmodule
 
 
-
-
 // Verilog Code for Half Adder
 module Half_adder_tb();
   reg  a, b;
@@ -67,8 +65,6 @@ module half_adder(a,b,sum,carry);
   assign sum = a ^ b;
   assign carry = a & b; 
 endmodule
-
-
 
 
 
