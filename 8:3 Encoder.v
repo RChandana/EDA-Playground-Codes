@@ -7,7 +7,6 @@ or(b,d2,d3,d6,d7);
 or(c,d1,d3,d5,d7);
 endmodule
 
-
 //
 module TestModule;
 // Inputs
@@ -62,8 +61,8 @@ d4 = 0;
 d5 = 0;
 d6 = 0;
 d7 = 0;
-// Wait 100 ns for global reset to finish
+
 #100;
-// Add stimulus here
+
 end
 endmodule
